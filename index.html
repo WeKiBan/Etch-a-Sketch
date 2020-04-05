@@ -4,11 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
     <title>Etch-a-Sketch</title>
 </head>
 <body>
+    <div id="page-container">
+    <div>
+        <h1 id="header">Etch-A-Sketch</h1>
+    </div>
+    <div id="buttons">
+        <button id="random-color">Random Colors</button>
+        <input id="color-picker" name="Color Picker" type="color" value="#ff0000"/>
+        <button id="black-white">Black and White</button>
+    </div>
     <div id="etch-a-sketch-container">
     </div>
+    <div id="buttons">
+        <button id="reset">Reset</button>
+        <div>
+            <button id="change-size">change size</button>
+        <input type="number" id="square-size" name="square-size" min="1" max="50" value="16">
+    </div>
+    </div>
 </body>
+</div>
 <script src="script.js"></script>
 </html>

@@ -1,15 +1,46 @@
+#page-container{
+  height:100vh;
+  border: solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+#header{
+  text-align: center;
+  padding: 20px;
+}
+
+#buttons{
+  display: flex;
+  width: 80vw;
+  max-width: 600px;
+  justify-content: space-evenly;
+}
+
+#color-picker{
+  width:20px;
+}
+
+
+
+/* css for the main content */
 #etch-a-sketch-container{
     width: 80vw;
     height: 80vw;
+    max-width: 600px;
+    max-height: 600px;;
     background-color:white;
     display: flex;
     flex-direction: column;
-    margin:auto;
-    border:solid grey 2px;
+    border:solid turquoise 2px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 20px;
     
 }
-  
-
 .row{
     width: 100%;
     display: flex;

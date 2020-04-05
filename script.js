@@ -1,6 +1,19 @@
-let etchASketchContainer = document.getElementById('etch-a-sketch-container') 
+let etchASketchContainer = document.getElementById('etch-a-sketch-container')
+let RandomColors = document.getElementById('random-color');
+let blackWhite = document.getElementById('black-white');
+let ColorPicker = document.getElementById("color-picker")
 let rows = document.querySelector('#etch-a-sketch-container').children;
-let color = getRandomColor;
+let reset = document.getElementById('reset')
+let changeSize = document.getElementById('change-size');
+let color = blackColor;
+
+
+
+reset.addEventListener('click', function(){ location.reload();})
+RandomColors.addEventListener('click', function(){ color = getRandomColor})
+blackWhite.addEventListener('click', function(){ color = blackColor})
+ColorPicker.addEventListener('click', function(){color = colorPicker})
+changeSize.addEventListener('click', function(){ newSize()})
 
 /* makes the grid depending on inputs */
 function makeGrid(num){
@@ -30,11 +43,11 @@ Array.from(rows).forEach(row => {
         }
     )
     });
-}
-
+}   
+ 
 /* to set opacity depending on sketch mode */
 function setOpacity(opacityValue){
-  if(color === getRandomColor){
+  if(color === getRandomColor || color === colorPicker){
     return 1;
   } else if(opacityValue < 1) {
     return (parseFloat(opacityValue) + 0.1)
@@ -58,6 +71,17 @@ function getRandomColor() {
   function blackColor(){  
     return "black";
   }
-    color = blackColor;
-    makeGrid(27);
+
+  function colorPicker(){
+    return document.getElementById("color-picker").value;
+}  
+
+function newSize(){
+  let squareSize = document.getElementById('square-size').value;
+  console.log(squareSize)
+  etchASketchContainer.innerHTML = "";
+  makeGrid(squareSize);
+
+}
+    makeGrid(16);
    
