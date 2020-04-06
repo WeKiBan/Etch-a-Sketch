@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="reset.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/366e86972c.js" crossorigin="anonymous"></script>
     <title>Etch-a-Sketch</title>
 </head>
 <body>
@@ -12,21 +14,24 @@
     <div>
         <h1 id="header">Etch-A-Sketch</h1>
     </div>
-    <div id="buttons">
-        <button id="random-color">Random Colors</button>
-        <input id="color-picker" name="Color Picker" type="color" value="#ff0000"/>
-        <button id="black-white">Black and White</button>
-    </div>
+    
+    <div id="buttons">      
+       <div>  
+           <button class="button-style" id="change-size">change size</button>
+           <input class="button-style" type="number" id="square-size" name="square-size" min="1" max="50" value="16">
+           
+       </div>
+       <button class="button-style" id="reset">Reset</button> 
+    </div> 
+
     <div id="etch-a-sketch-container">
     </div>
-    <div id="buttons">
-        <button id="reset">Reset</button>
-        <div>
-            <button id="change-size">change size</button>
-        <input type="number" id="square-size" name="square-size" min="1" max="50" value="16">
+    <div id="buttons"> 
+            <button class="button-style" id="random-color">Random Colors</button>
+            <div id ="color-picker-container" class="button-style"><p><input  id="color-picker" name="Color Picker" type="color" value="#86BBD8"/><i class="fas fa-eye-dropper"></i></div>
+            <button class="button-style" id="black-white">Gradual Black</button>
     </div>
-    </div>
+
 </body>
-</div>
 <script src="script.js"></script>
 </html>
